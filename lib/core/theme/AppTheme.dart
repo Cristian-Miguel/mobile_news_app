@@ -14,17 +14,34 @@ class AppTheme {
       onPrimary: Colors.white, // Text on primary color
       onSecondary: Colors.black, // Text on secondary color
       onSurface: Colors.black, // Text on surfaces
-      onError: Colors.white, // Text on error colors
+      onError: Colors.white,
+      // Text on error colors
     ),
+
     textTheme: const TextTheme(
       displayLarge: TextStyle(
-          fontSize: 32,
-          fontWeight: FontWeight.bold,
-          color: Colors.black), // Headline
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      displayMedium: TextStyle(
+        fontSize: 28,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      titleLarge: TextStyle(fontSize: 22, color: Colors.black54),
+      titleMedium: TextStyle(fontSize: 20, color: Colors.black54),
+      titleSmall: TextStyle(fontSize: 18, color: Colors.black54), // Headline
       bodyLarge:
           TextStyle(fontSize: 16, color: Colors.black87), // Standard body text
-      bodyMedium:
-          TextStyle(fontSize: 14, color: Colors.black54), // Secondary body text
+      bodyMedium: TextStyle(fontSize: 14, color: Colors.black87),
+      bodySmall:
+          TextStyle(fontSize: 12, color: Colors.black87), // Secondary body text
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF90CAF9), // Primary Blue
@@ -73,7 +90,7 @@ class AppTheme {
       titleSmall: TextStyle(fontSize: 18, color: Colors.white60), // Headline
       bodyLarge:
           TextStyle(fontSize: 16, color: Colors.white70), // Standard body text
-      bodyMedium: TextStyle(fontSize: 14, color: Colors.white60),
+      bodyMedium: TextStyle(fontSize: 14, color: Colors.white70),
       bodySmall:
           TextStyle(fontSize: 12, color: Colors.white70), // Secondary body text
     ),
