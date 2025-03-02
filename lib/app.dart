@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_news/core/theme/AppTheme.dart';
+import 'package:mobile_news/features/auth/ui/screens/auth_gate_screen.dart';
 import 'features/home/ui/screens/home_screen.dart';
 import 'features/search/ui/screens/search_screen.dart';
 import 'features/saved/ui/screens/saved_screen.dart';
-import 'features/profile/ui/screens/profile_screen.dart';
 
 // 📌 Bottom Navigation State Provider
 final bottomNavIndexProvider = StateProvider<int>((ref) => 0);
@@ -37,7 +37,8 @@ final _router = GoRouter(
         GoRoute(path: '/', builder: (context, state) => HomeScreen()),
         GoRoute(path: '/search', builder: (context, state) => SearchScreen()),
         GoRoute(path: '/saved', builder: (context, state) => SavedScreen()),
-        GoRoute(path: '/profile', builder: (context, state) => ProfileScreen()),
+        GoRoute(
+            path: '/profile', builder: (context, state) => AuthGateScreen()),
       ],
     ),
   ],
@@ -62,15 +63,19 @@ class MainLayout extends ConsumerWidget {
           switch (index) {
             case 0:
               context.go('/');
+              ref.read(bottomNavIndexProvider.notifier).state = 0;
               break;
             case 1:
               context.go('/search');
+              ref.read(bottomNavIndexProvider.notifier).state = 1;
               break;
             case 2:
               context.go('/saved');
+              ref.read(bottomNavIndexProvider.notifier).state = 2;
               break;
             case 3:
               context.go('/profile');
+              ref.read(bottomNavIndexProvider.notifier).state = 3;
               break;
           }
         },

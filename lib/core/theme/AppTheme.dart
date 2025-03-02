@@ -49,6 +49,16 @@ class AppTheme {
       titleTextStyle: TextStyle(
           color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
     ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(Color(0xFF90CAF9)),
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+      ),
+    ),
     scaffoldBackgroundColor: const Color(0xFFF5F5F5),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedIconTheme: IconThemeData(color: Color(0xFF03315A)),
@@ -99,6 +109,16 @@ class AppTheme {
       elevation: 0,
       titleTextStyle: TextStyle(
           color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: WidgetStatePropertyAll(Color(0xFF03315A)),
+        shape: WidgetStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
+      ),
     ),
     scaffoldBackgroundColor: const Color(0xFF1E1E1E),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
